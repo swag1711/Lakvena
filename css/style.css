@@ -10282,3 +10282,17 @@ textarea.form-control {
   .ftco-footer .ftco-footer-widget > .d-flex ul {
     margin-right: 0 !important; }
 }
+
+/* -------------------------------------------------------------------------
+   9. Touch scrolling over the carousels
+   Owl Carousel 2.3.0 ships `touch-action: none` on .owl-carousel.owl-drag
+   .owl-item, which hands every touch gesture to JS and leaves the browser
+   with no native scrolling at all. The hero carousel fills the first screen
+   on a phone, so a swipe that starts there could never scroll the page.
+   Owl's own drag handler already ignores vertical drags, so pan-y (the value
+   Owl 2.3.2+ uses) restores vertical scrolling while keeping the horizontal
+   swipe between slides. Loaded after owl.carousel.min.css, so this wins.
+   ------------------------------------------------------------------------- */
+.owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y; }

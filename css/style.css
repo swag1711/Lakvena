@@ -8404,9 +8404,118 @@ h1, h2, h3, h4, h5,
                 opacity: .3; }
               .owl-carousel.home-slider .slider-item .slider-text .one-third:after {
                 opacity: 0; } }
+        .hero-graphic {
+          position: relative;
+          width: min(430px, 100%);
+          max-width: 430px;
+          aspect-ratio: 1 / 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+        }
+        .hero-graphic img,
+        .hero-graphic svg {
+          width: 100% !important;
+          height: 100% !important;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .hero-graphic .hero-logo {
+          object-fit: contain;
+          z-index: 10;
+        }
+        .hero-graphic .hero-svg {
+          animation: rotateText 15s linear infinite;
+          overflow: visible;
+        }
+        @media (max-width: 991.98px) {
+          .owl-carousel.home-slider .slider-item .slider-text {
+            height: auto !important;
+            min-height: auto !important;
+            padding: 2rem 0 3rem;
+          }
+          .owl-carousel.home-slider .slider-item .slider-text .one-third,
+          .owl-carousel.home-slider .slider-item .slider-text .one-forth {
+            width: 100%;
+            position: relative;
+            max-width: 100%;
+          }
+          .owl-carousel.home-slider .slider-item .slider-text .one-third {
+            margin-bottom: 1rem;
+            z-index: 0;
+          }
+          .hero-graphic {
+            width: min(320px, 100%);
+            max-width: 320px;
+            margin: 0 auto;
+          }
+          .owl-carousel.home-slider .slider-item .slider-text .one-forth {
+            width: 100%;
+            position: relative;
+            padding: 1.5rem 1.25rem 2rem;
+            margin-top: 1rem;
+            background: rgba(255,255,255,0.98);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+          }
+          .owl-carousel.home-slider .slider-item .slider-text .one-forth .text {
+            max-width: 100%;
+          }
+          .owl-carousel.home-slider .slider-item .slider-text .subheading,
+          .owl-carousel.home-slider .slider-item .slider-text h1,
+          .owl-carousel.home-slider .slider-item .slider-text p {
+            color: #000 !important;
+          }
+        }
         .owl-carousel.home-slider .slider-item .slider-text .one-forth {
           width: 50%;
           position: relative; }
+          @media (max-width: 991.98px) {
+            .owl-carousel.home-slider .slider-item .slider-text .one-forth {
+              width: 100% !important;
+              position: relative !important;
+              top: auto !important;
+              left: auto !important;
+              right: auto !important;
+              bottom: auto !important;
+              z-index: 2 !important;
+              padding: 1.5rem 1.25rem 2rem !important;
+              margin-top: 1rem !important;
+              background: rgba(255,255,255,0.98) !important;
+              border-radius: 20px !important;
+              box-shadow: 0 15px 35px rgba(0,0,0,0.08) !important;
+            }
+            .owl-carousel.home-slider .slider-item .slider-text {
+              display: flex !important;
+              flex-direction: column !important;
+              align-items: center !important;
+              justify-content: flex-start !important;
+              height: auto !important;
+              min-height: auto !important;
+              padding: 2rem 0 3rem !important;
+            }
+            .owl-carousel.home-slider .slider-item .slider-text .one-third {
+              width: 100% !important;
+              max-width: 100% !important;
+              margin-bottom: 1rem !important;
+              z-index: 1 !important;
+            }
+            .hero-graphic {
+              width: min(320px, 100%) !important;
+              max-width: 320px !important;
+            }
+            .hero-graphic img,
+            .hero-graphic svg {
+              width: 100% !important;
+              height: 100% !important;
+              position: absolute !important;
+              top: 0 !important;
+              left: 0 !important;
+            }
+          }
+
           @media (min-width: 768px) {
             .owl-carousel.home-slider .slider-item .slider-text .one-forth {
               position: absolute;
@@ -8419,15 +8528,21 @@ h1, h2, h3, h4, h5,
           @media (max-width: 991.98px) {
             .owl-carousel.home-slider .slider-item .slider-text .one-forth {
               width: 100%;
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              z-index: 1;
-              padding: 1em; } }
+              position: relative;
+              top: auto;
+              left: auto;
+              right: auto;
+              bottom: auto;
+              z-index: 2;
+              padding: 1.5rem 1.25rem 2rem;
+              margin-top: 1rem;
+              background: rgba(255,255,255,0.98);
+              border-radius: 20px;
+              box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+            } }
           .owl-carousel.home-slider .slider-item .slider-text .one-forth .text {
-            position: relative; }
+            position: relative;
+            z-index: 2; }
             @media (min-width: 992px) {
               .owl-carousel.home-slider .slider-item .slider-text .one-forth .text {
                 position: absolute;
@@ -8500,19 +8615,143 @@ h1, h2, h3, h4, h5,
             font-weight: 900; }
           @media (max-width: 991.98px) {
             .owl-carousel.home-slider .slider-item .slider-text h1 {
-              color: #fff;
+              color: #000;
               font-size: 50px; } }
           @media (max-width: 767.98px) {
             .owl-carousel.home-slider .slider-item .slider-text h1 {
+              color: #000;
               font-size: 40px; } }
         .owl-carousel.home-slider .slider-item .slider-text p {
           color: rgba(0, 0, 0, 0.8);
           font-weight: 400; }
           @media (max-width: 991.98px) {
             .owl-carousel.home-slider .slider-item .slider-text p {
-              color: rgba(255, 255, 255, 0.7);
+              color: rgba(0, 0, 0, 0.85);
               font-size: 23px; } }
+          @media (max-width: 991.98px) {
+            .owl-carousel.home-slider .slider-item .slider-text {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: flex-start;
+              min-height: auto;
+              height: auto;
+              padding: 2rem 0 3rem;
+            }
+            .owl-carousel.home-slider .slider-item .slider-text .one-third,
+            .owl-carousel.home-slider .slider-item .slider-text .one-forth {
+              width: 100%;
+              position: relative;
+              max-width: 100%;
+            }
+            .owl-carousel.home-slider .slider-item .slider-text .one-third {
+              margin-bottom: 1rem;
+              z-index: 0;
+            }
+            .owl-carousel.home-slider .slider-item .slider-text .one-third > div,
+            .hero-graphic {
+              width: min(320px, 100%);
+              max-width: 320px;
+            }
+            .owl-carousel.home-slider .slider-item .slider-text .one-third > div {
+              width: 100% !important;
+              height: auto !important;
+              aspect-ratio: 1 / 1;
+            }
+            .owl-carousel.home-slider .slider-item .slider-text .one-forth {
+              width: 100%;
+              position: relative;
+              top: auto;
+              left: auto;
+              right: auto;
+              bottom: auto;
+              z-index: 2;
+              padding: 1.75rem 1.25rem 2rem;
+              margin-top: 1rem;
+              background: rgba(255,255,255,0.98);
+              border-radius: 24px;
+              box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            }
+            .owl-carousel.home-slider .slider-item .slider-text .one-forth .text {
+              max-width: 100%;
+              position: relative;
+              z-index: 2;
+            }
+            .owl-carousel.home-slider .slider-item .slider-text .subheading,
+            .owl-carousel.home-slider .slider-item .slider-text h1,
+            .owl-carousel.home-slider .slider-item .slider-text p {
+              color: #000 !important;
+            }
+            .owl-carousel.home-slider .slider-item .slider-text .subheading {
+              color: #000000;
+            }
+            .owl-carousel.home-slider .slider-item .slider-text h1 {
+              color: #000000;
+            }
+          }
+            .owl-carousel.home-slider .slider-item .slider-text h1 {
+              color: #000000;
+            }
+          }
     .owl-carousel.home-slider .owl-nav {
+      position: absolute;
+      bottom: 60px !important;
+      left: 0;
+      right: 0;
+      margin: 0 auto; }
+      @media (max-width: 991.98px) {
+        .owl-carousel.home-slider .owl-nav {
+          display: none; } }
+      .owl-carousel.home-slider .owl-nav .owl-prev,
+      .owl-carousel.home-slider .owl-nav .owl-next {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: #fff !important;
+        -moz-transition: all 0.7s ease;
+        -o-transition: all 0.7s ease;
+        -webkit-transition: all 0.7s ease;
+        -ms-transition: all 0.7s ease;
+        transition: all 0.7s ease;
+        opacity: 1; }
+        .owl-carousel.home-slider .owl-nav .owl-prev span:before,
+        .owl-carousel.home-slider .owl-nav .owl-next span:before {
+          font-size: 20px;
+          margin-top: 7px;
+          color: #000000; }
+      .owl-carousel.home-slider .owl-nav .owl-prev {
+        top: 0 !important;
+        right: 0 !important; }
+        @media (min-width: 992px) {
+          .owl-carousel.home-slider .owl-nav .owl-prev {
+            right: 61px !important; } }
+        .owl-carousel.home-slider .owl-nav .owl-prev:hover, .owl-carousel.home-slider .owl-nav .owl-prev:focus {
+          background: #000000 !important;
+          outline: none !important; }
+          .owl-carousel.home-slider .owl-nav .owl-prev:hover span:before, .owl-carousel.home-slider .owl-nav .owl-prev:focus span:before {
+            font-size: 20px;
+            margin-top: 7px;
+            color: #ffa45c; }
+      .owl-carousel.home-slider .owl-nav .owl-next {
+        top: 0 !important;
+        right: 0 !important; }
+        @media (min-width: 992px) {
+          .owl-carousel.home-slider .owl-nav .owl-next {
+            right: 0 !important; } }
+        .owl-carousel.home-slider .owl-nav .owl-next:hover, .owl-carousel.home-slider .owl-nav .owl-next:focus {
+          background: #000000 !important;
+          outline: none !important; }
+          .owl-carousel.home-slider .owl-nav .owl-next:hover span:before, .owl-carousel.home-slider .owl-nav .owl-next:focus span:before {
+            font-size: 24px;
+            margin-top: 7px;
+            color: #ffa45c; }
+    .owl-carousel.home-slider .owl-dots {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 40px;
+      width: 100%;
+      text-align: center; }
       position: absolute;
       bottom: 60px !important;
       left: 0;
@@ -10045,254 +10284,438 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
 
-    
-
-
-    
-/* =========================================================================
-   MOBILE / TABLET FIXES  —  Lakvena
-   Everything below is scoped to max-width media queries, so the desktop
-   layout (>= 992px) renders exactly as before.
-   ========================================================================= */
-
-/* -------------------------------------------------------------------------
-   1. Kill the horizontal scrollbar
-   The hero badge is hard-coded to 430px, which is wider than most phones
-   and drags the whole page sideways.
-   ------------------------------------------------------------------------- */
-@media (max-width: 991.98px) {
-  html,
-  body {
-    overflow-x: hidden;
-    max-width: 100%; }
-
-  img {
-    max-width: 100%;
-    height: auto; }
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-decoration: none;
+  z-index: 9999;
 }
 
-/* -------------------------------------------------------------------------
-   2. Top contact bar
-   ------------------------------------------------------------------------- */
-@media (max-width: 991.98px) {
-  /* One line each, centred. Sharing the row three ways is too tight below
-     992px and breaks the phone number across two lines. */
-  .bg-black .topper {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-    justify-content: center;
-    text-align: center;
-    padding-right: 0 !important;
-    margin-bottom: 6px; }
-
-  .bg-black .topper:last-child {
-    margin-bottom: 0; }
-
-  .bg-black .topper .text {
-    width: auto;
-    word-break: break-word; }
+.whatsapp-icon {
+  width: 62px;
+  height: 62px;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 18px 36px rgba(34, 72, 36, 0.28);
+  border: 2px solid rgba(255, 255, 255, 0.24);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
 }
 
-/* -------------------------------------------------------------------------
-   3. Navbar brand
-   ------------------------------------------------------------------------- */
-@media (max-width: 575.98px) {
-  #ftco-navbar .navbar-brand img {
-    height: 46px !important;
-    margin-right: 8px !important; }
-
-  #ftco-navbar .navbar-brand h5 {
-    font-size: 18px; }
+.whatsapp-icon:hover {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 22px 42px rgba(34, 72, 36, 0.35);
 }
 
-/* -------------------------------------------------------------------------
-   4. Hero slider  — the main mobile breakage
-   Below 992px the template absolutely positions .one-forth over the whole
-   slide and switches the copy to white (it expects a dark photo behind it).
-   This page uses a white logo panel instead, so the headline was invisible
-   and sat on top of the logo. Stack the two panels instead and restore the
-   dark type used on desktop.
-   ------------------------------------------------------------------------- */
+.whatsapp-float.open .whatsapp-icon {
+  animation: whatsapp-icon-pulse 1.2s ease-in-out 1;
+}
+
+@keyframes whatsapp-icon-pulse {
+  0%, 100% { transform: translateY(0) scale(1); }
+  40% { transform: translateY(-5px) scale(1.04); }
+  60% { transform: translateY(-2px) scale(1.02); }
+}
+
+.whatsapp-card {
+  position: absolute;
+  bottom: 90px;
+  right: 0;
+  width: 290px;
+  background: rgba(255, 255, 255, 0.96);
+  color: #111;
+  border-radius: 26px;
+  padding: 22px;
+  box-shadow: 0 30px 80px rgba(15, 46, 80, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(24px) scale(0.96);
+  transition: opacity 0.28s ease, transform 0.28s ease, visibility 0.28s ease;
+  text-align: left;
+  font-family: inherit;
+}
+
+.whatsapp-float.open .whatsapp-card {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.whatsapp-card::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  background: rgba(37, 211, 102, 0.14);
+  border-radius: 50%;
+  filter: blur(8px);
+}
+
+.whatsapp-card-heading {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #102a43;
+}
+
+.whatsapp-card-text {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: #334155;
+}
+
+.whatsapp-card-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #25d366 0%, #16a34a 100%);
+  color: #fff;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  box-shadow: 0 16px 34px rgba(17, 103, 65, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+
+.whatsapp-card-button:hover {
+  background: linear-gradient(135deg, #19a14c 0%, #0f8152 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 20px 40px rgba(17, 103, 65, 0.30);
+}
+
+.whatsapp-card-button .ion-logo-whatsapp {
+  margin-right: 10px;
+  font-size: 17px;
+}
+
+.whatsapp-card-powered {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 14px;
+  letter-spacing: 0.04em;
+}
+
+.whatsapp-float::after,
+.whatsapp-float:hover::after {
+  display: none;
+}
+
+/* Strong mobile hero text override */
 @media (max-width: 991.98px) {
-  /* main.js pins every .js-fullheight element to the viewport height; the
-     logo + copy do not fit in that box on a phone, so size to content. */
-  #home-section .owl-carousel.home-slider,
-  #home-section .js-fullheight {
-    height: auto !important; }
-
-  #home-section .slider-item .slider-text {
-    padding: 2.5em 0 3.5em; }
-
-  /* logo panel on top ... */
-  #home-section .slider-item .slider-text .one-third {
-    order: -1;
-    width: 100%;
-    padding: 0 15px;
-    z-index: 0; }
-
-  /* ... without the dark veil meant for photo slides */
-  #home-section .slider-item .slider-text .one-third .overlay {
-    opacity: 0 !important; }
-
-  /* ... copy underneath it, back in normal document flow */
-  #home-section .slider-item .slider-text .one-forth {
-    order: 0;
+  .owl-carousel.home-slider,
+  .owl-carousel.home-slider .slider-item,
+  .owl-carousel.home-slider .slider-item .slider-text {
+    height: auto !important;
+    min-height: auto !important;
+  }
+  .owl-carousel.home-slider .slider-item .slider-text {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    min-height: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding: 2rem 0 3rem !important;
+  }
+  .owl-carousel.home-slider .slider-item .slider-text .one-third,
+  .owl-carousel.home-slider .slider-item .slider-text .one-forth {
+    width: 100% !important;
     position: relative !important;
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    width: 100%;
-    margin: 0;
-    padding: 2em 1.5em 0;
-    z-index: 1; }
-
-  #home-section .slider-item .slider-text .one-forth .text {
-    position: relative;
-    top: auto;
-    max-width: 100%;
-    padding: 0;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none; }
-
-  /* readable type on the light background */
-  #home-section .slider-item .slider-text .subheading {
-    color: #000000;
-    font-size: 11px;
-    letter-spacing: 3px; }
-
-  #home-section .slider-item .slider-text h1 {
-    color: #000000;
-    font-size: 34px; }
-
-  #home-section .slider-item .slider-text p {
-    color: rgba(0, 0, 0, 0.8);
-    font-size: 16px; }
-
-  /* rotating logo badge: replace the hard-coded 430px / 400px boxes */
-  #home-section .slider-item .one-third > div {
-    width: 320px !important;
-    height: 320px !important;
-    margin: 0 auto; }
-
-  #home-section .slider-item .one-third > div > img {
-    width: 90% !important;
-    height: 90% !important; }
-
-  #home-section .slider-item .one-third > div > svg {
-    width: 100%;
-    height: 100%; }
+    max-width: 100% !important;
+  }
+  .owl-carousel.home-slider .slider-item .slider-text .one-third {
+    margin-bottom: 1rem !important;
+    z-index: 0 !important;
+  }
+  .owl-carousel.home-slider .slider-item .slider-text .one-third > div,
+  .hero-graphic {
+    width: min(320px, 100%) !important;
+    max-width: 320px !important;
+  }
+  .owl-carousel.home-slider .slider-item .slider-text .one-third > div {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1;
+  }
+  .owl-carousel.home-slider .slider-item .slider-text .one-forth {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    z-index: 5 !important;
+    padding: 1.75rem 1.25rem 2rem !important;
+    margin-top: 1rem !important;
+    background: rgba(255,255,255,0.98) !important;
+    border-radius: 24px !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08) !important;
+  }
+  .owl-carousel.home-slider .slider-item .slider-text .one-forth .text {
+    display: block !important;
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-width: 100% !important;
+    z-index: 6 !important;
+  }
+  .owl-carousel.home-slider .slider-item .slider-text .subheading,
+  .owl-carousel.home-slider .slider-item .slider-text h1,
+  .owl-carousel.home-slider .slider-item .slider-text p {
+    color: #000 !important;
+  }
 }
 
-@media (max-width: 575.98px) {
-  #home-section .slider-item .one-third > div {
-    width: 72vw !important;
-    height: 72vw !important;
-    max-width: 320px;
-    max-height: 320px; }
-
-  #home-section .slider-item .slider-text h1 {
-    font-size: 28px; }
-
-  #home-section .slider-item .slider-text .btn-primary {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important; }
-}
-
-@media (max-width: 991.98px) and (prefers-reduced-motion: reduce) {
-  #home-section .slider-item .one-third > div > svg {
-    -webkit-animation: none !important;
-    animation: none !important; }
-}
-
-/* -------------------------------------------------------------------------
-   5. About section
-   ------------------------------------------------------------------------- */
-@media (max-width: 767.98px) {
-  .wrap-about .heading-section-bold h2 {
-    font-size: 26px; }
-
-  .wrap-about .ftco-services .services {
-    margin-bottom: 25px; }
-}
-
-/* -------------------------------------------------------------------------
-   6. Product cards
-   Below 992px the hover bar (.bottom-area) is permanently visible and sits
-   over the bottom of the image, covering the "New" / "Trending" badge.
-   ------------------------------------------------------------------------- */
+/* Mobile Navbar Sub-Menu Layout Fix */
 @media (max-width: 991.98px) {
-  .product .img-prod span.status {
-    top: 10px;
-    bottom: auto; }
-
-  .product .img-prod img {
-    width: 100%; }
+  .ftco_navbar .navbar-nav .dropdown-menu {
+    display: block !important;
+    position: static !important;
+    float: none !important;
+    width: 100% !important;
+    margin-top: 6px !important;
+    margin-bottom: 12px !important;
+    background-color: rgba(139, 0, 0, 0.04) !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding-left: 1rem !important;
+    border-left: 3px solid #8B0000 !important;
+    border-radius: 6px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  .ftco_navbar .navbar-nav .dropdown-menu .dropdown-item {
+    color: #8B0000 !important;
+    padding: 10px 15px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    display: block !important;
+    border-bottom: 1px dashed rgba(139, 0, 0, 0.12) !important;
+  }
+  .ftco_navbar .navbar-nav .dropdown-menu .dropdown-item:last-child {
+    border-bottom: none !important;
+  }
+  .ftco_navbar .navbar-nav .dropdown-menu .dropdown-item:hover,
+  .ftco_navbar .navbar-nav .dropdown-menu .dropdown-item:focus {
+    background-color: transparent !important;
+    color: #b8860b !important;
+  }
 }
 
-@media (max-width: 575.98px) {
-  .product .text .bottom-area a.add-to-cart,
-  .product .text .bottom-area a.buy-now {
-    font-size: 11px;
-    letter-spacing: 0; }
+/* ==========================================================================
+   PREMIUM NAVBAR HOVER EFFECTS & HIGHLIGHTED CART BUTTON
+   ========================================================================== */
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding-top: 1.2rem !important;
+  padding-bottom: 1.2rem !important;
 }
 
-/* -------------------------------------------------------------------------
-   7. Newsletter subscribe form
-   ------------------------------------------------------------------------- */
-@media (max-width: 575.98px) {
-  .subscribe-form .form-group {
-    display: block !important; }
-
-  .subscribe-form .form-group .form-control {
-    width: 100%;
-    text-align: center; }
-
-  .subscribe-form .form-group .submit {
-    width: 100%;
-    border-left: 0;
-    border-top: 1px solid black; }
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #8B0000, #D4AF37);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-50%);
+  border-radius: 2px;
+  opacity: 0;
 }
 
-/* -------------------------------------------------------------------------
-   8. Footer
-   ------------------------------------------------------------------------- */
-@media (max-width: 767.98px) {
-  .ftco-footer .ftco-footer-widget {
-    margin-left: 0 !important; }
-
-  .ftco-footer .ftco-footer-social {
-    float: none !important; }
-
-  .ftco-footer .block-23 ul li .text {
-    word-break: break-word; }
+.ftco-navbar-light .navbar-nav > .nav-item:hover > .nav-link,
+.ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link {
+  color: #8B0000 !important;
+  transform: translateY(-2px);
 }
 
-@media (max-width: 575.98px) {
-  .ftco-footer .ftco-footer-widget h2.ftco-heading-2 .navbar-brand {
-    padding-top: 0;
-    padding-bottom: 0; }
-
-  .ftco-footer .ftco-footer-widget > .d-flex {
-    display: block !important; }
-
-  .ftco-footer .ftco-footer-widget > .d-flex ul {
-    margin-right: 0 !important; }
+.ftco-navbar-light .navbar-nav > .nav-item:hover > .nav-link::after,
+.ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link::after {
+  width: 80%;
+  opacity: 1;
 }
 
-/* -------------------------------------------------------------------------
-   9. Touch scrolling over the carousels
-   Owl Carousel 2.3.0 ships `touch-action: none` on .owl-carousel.owl-drag
-   .owl-item, which hands every touch gesture to JS and leaves the browser
-   with no native scrolling at all. The hero carousel fills the first screen
-   on a phone, so a swipe that starts there could never scroll the page.
-   Owl's own drag handler already ignores vertical drags, so pan-y (the value
-   Owl 2.3.2+ uses) restores vertical scrolling while keeping the horizontal
-   swipe between slides. Loaded after owl.carousel.min.css, so this wins.
-   ------------------------------------------------------------------------- */
-.owl-carousel.owl-drag .owl-item {
-  -ms-touch-action: pan-y;
-  touch-action: pan-y; }
+/* Highlighted Gold-Maroon Cart Button */
+.ftco-navbar-light .navbar-nav > .nav-item.cta {
+  margin-left: 10px;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item.cta > a.nav-link {
+  background: linear-gradient(135deg, #8B0000 0%, #B8860B 100%) !important;
+  color: #FFFFFF !important;
+  border: 1px solid #D4AF37 !important;
+  border-radius: 30px !important;
+  padding: 10px 22px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 4px 15px rgba(139, 0, 0, 0.35), 0 0 10px rgba(212, 175, 55, 0.2) !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item.cta > a.nav-link::after {
+  display: none !important;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item.cta > a.nav-link span.icon-shopping_cart {
+  font-size: 16px;
+  color: #FFF6D6;
+  transition: transform 0.3s ease;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item.cta > a.nav-link:hover {
+  background: linear-gradient(135deg, #B8860B 0%, #8B0000 100%) !important;
+  color: #FFF6D6 !important;
+  transform: translateY(-3px) scale(1.04) !important;
+  box-shadow: 0 8px 25px rgba(139, 0, 0, 0.45), 0 0 18px rgba(212, 175, 55, 0.6) !important;
+  border-color: #FFF6D6 !important;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item.cta > a.nav-link:hover span.icon-shopping_cart {
+  transform: scale(1.2) rotate(-10deg);
+}
+
+@media (max-width: 991.98px) {
+  .ftco-navbar-light .navbar-nav > .nav-item.cta {
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .ftco-navbar-light .navbar-nav > .nav-item.cta > a.nav-link {
+    display: inline-block !important;
+    text-align: center;
+    width: auto;
+  }
+}
+
+/* ==========================================================================
+   HIGHLIGHTED LAKVENA BRAND LOGO & TEXT STYLING
+   ========================================================================== */
+.ftco-navbar-light .navbar-brand {
+  background: linear-gradient(135deg, rgba(255, 246, 214, 0.7) 0%, rgba(255, 255, 255, 0.95) 100%) !important;
+  border: 1.5px solid #D4AF37 !important;
+  border-radius: 40px !important;
+  padding: 6px 18px 6px 12px !important;
+  box-shadow: 0 4px 18px rgba(139, 0, 0, 0.12), 0 0 12px rgba(212, 175, 55, 0.25) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.ftco-navbar-light .navbar-brand:hover {
+  background: linear-gradient(135deg, #FFF6D6 0%, #FFFFFF 100%) !important;
+  border-color: #8B0000 !important;
+  transform: translateY(-2px) scale(1.03) !important;
+  box-shadow: 0 8px 25px rgba(139, 0, 0, 0.22), 0 0 20px rgba(212, 175, 55, 0.5) !important;
+}
+
+.ftco-navbar-light .navbar-brand img {
+  height: 52px !important;
+  width: auto !important;
+  margin-right: 10px !important;
+  filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.45)) brightness(1.05) !important;
+  transition: transform 0.3s ease, filter 0.3s ease !important;
+}
+
+.ftco-navbar-light .navbar-brand:hover img {
+  transform: scale(1.08) rotate(-2deg) !important;
+  filter: drop-shadow(0 4px 12px rgba(139, 0, 0, 0.5)) brightness(1.1) !important;
+}
+
+.ftco-navbar-light .navbar-brand h5 {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 22px !important;
+  letter-spacing: 1px !important;
+  background: linear-gradient(135deg, #8B0000 0%, #B8860B 50%, #4A000B 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  margin-bottom: 0 !important;
+  text-transform: capitalize !important;
+}
+
+/* ==========================================================================
+   WHATSAPP CARD FRIENDLY SUPPORT AVATAR STYLES
+   ========================================================================== */
+.whatsapp-card-header {
+  background: linear-gradient(135deg, #075E54 0%, #128C7E 100%) !important;
+  margin: -22px -22px 16px -22px !important;
+  padding: 16px 20px !important;
+  border-radius: 24px 24px 0 0 !important;
+  box-shadow: 0 4px 14px rgba(7, 94, 84, 0.25) !important;
+  border-bottom: none !important;
+}
+
+.whatsapp-avatar-wrap {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.whatsapp-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #25D366;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.whatsapp-online-dot {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 12px;
+  height: 12px;
+  background-color: #25D366;
+  border: 2px solid #075E54;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #25D366;
+}
+
+.whatsapp-support-name {
+  color: #FFFFFF !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3) !important;
+  margin-bottom: 2px !important;
+}
+
+.whatsapp-support-status {
+  color: #E2F6E9 !important;
+  font-size: 11.5px !important;
+  font-weight: 600 !important;
+  display: block !important;
+  opacity: 0.95 !important;
+}

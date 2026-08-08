@@ -41,9 +41,17 @@
 
 	var fullHeight = function() {
 
-		$('.js-fullheight').css('height', $(window).height());
+		if ($(window).width() > 991.98) {
+			$('.home-slider, .slider-item').css('height', $(window).height());
+		} else {
+			$('.home-slider, .slider-item').css('height', 'auto');
+		}
 		$(window).resize(function(){
-			$('.js-fullheight').css('height', $(window).height());
+			if ($(window).width() > 991.98) {
+				$('.home-slider, .slider-item').css('height', $(window).height());
+			} else {
+				$('.home-slider, .slider-item').css('height', 'auto');
+			}
 		});
 
 	};
@@ -110,28 +118,21 @@
 	};
 	carousel();
 
+	// Dropdown Hover for Desktop Only (> 991.98px)
 	$('nav .dropdown').hover(function(){
-		var $this = $(this);
-		// 	 timer;
-		// clearTimeout(timer);
-		$this.addClass('show');
-		$this.find('> a').attr('aria-expanded', true);
-		// $this.find('.dropdown-menu').addClass('animated-fast fadeInUp show');
-		$this.find('.dropdown-menu').addClass('show');
+		if ($(window).width() > 991.98) {
+			var $this = $(this);
+			$this.addClass('show');
+			$this.find('> a').attr('aria-expanded', true);
+			$this.find('.dropdown-menu').addClass('show');
+		}
 	}, function(){
-		var $this = $(this);
-			// timer;
-		// timer = setTimeout(function(){
+		if ($(window).width() > 991.98) {
+			var $this = $(this);
 			$this.removeClass('show');
 			$this.find('> a').attr('aria-expanded', false);
-			// $this.find('.dropdown-menu').removeClass('animated-fast fadeInUp show');
 			$this.find('.dropdown-menu').removeClass('show');
-		// }, 100);
-	});
-
-
-	$('#dropdown04').on('show.bs.dropdown', function () {
-	  console.log('show');
+		}
 	});
 
 	// scroll

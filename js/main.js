@@ -315,5 +315,169 @@
 
 
 
+	var updateNavUserText = function() {
+		var raw = localStorage.getItem('lakvena_user');
+		var navTexts = document.querySelectorAll('.nav-login-text');
+		if (raw && navTexts.length > 0) {
+			try {
+				var u = JSON.parse(raw);
+				if (u && u.loggedIn) {
+					var shortName = u.name ? u.name.split(' ')[0] : 'Account';
+					navTexts.forEach(function(el) { el.innerText = shortName; });
+					return;
+				}
+			} catch(e) {}
+		}
+		navTexts.forEach(function(el) { el.innerText = 'Login'; });
+	};
+	updateNavUserText();
+
+	// Global Luxury Search Overlay Modal System
+	var initGlobalSearchModal = function() {
+		if ($('#lakvenaSearchModal').length === 0) {
+			var searchModalHTML = `
+			<div id="lakvenaSearchModal">
+				<button class="search-modal-close" id="closeSearchModalBtn" aria-label="Close search">&times;</button>
+				<div class="search-modal-container">
+					<div class="text-center mb-3">
+						<h3 style="font-family:'Cinzel', serif; color:#FFD700; font-weight:700; font-size:24px; letter-spacing:1px; margin-bottom:4px;">Search Lakvena Collections</h3>
+						<p style="color:#d1b696; font-size:13px;">Curated Fashion Collections • Elegance Woven with Tradition</p>
+
+					</div>
+
+					<div class="search-input-box">
+						<span class="search-icon-inside icon-search"></span>
+						<input type="text" id="globalSearchInput" placeholder="Type to search sarees, haram, bridal sets..." autocomplete="off">
+					</div>
+
+					<div class="search-tags-list">
+						<span class="search-tag-pill active" data-tag="all">All Items</span>
+						<span class="search-tag-pill" data-tag="kanchipuram">Kanchipuram Silk</span>
+						<span class="search-tag-pill" data-tag="gold">1-Gram Gold</span>
+						<span class="search-tag-pill" data-tag="bridal">Bridal Collection</span>
+						<span class="search-tag-pill" data-tag="party">Party Wear</span>
+					</div>
+
+					<div id="globalSearchResultsGrid" class="search-results-grid"></div>
+				</div>
+			</div>`;
+
+			$('body').append(searchModalHTML);
+		}
+
+		var products = [
+			{ id: 1, title: 'Kanchipuram Pure Silk Saree', category: 'saree', tag: 'kanchipuram bridal', badge: 'Pure Silk', img: 'images/L1-p1.png', link: 'product-single.html' },
+			{ id: 2, title: 'Designer Party Wear Saree', category: 'saree', tag: 'party saree', badge: 'Trending', img: 'images/L1-p2.png', link: 'product-single.html' },
+			{ id: 3, title: 'One Gram Gold Necklace Set', category: 'jewellery', tag: 'gold necklace', badge: '1-Gram Gold', img: 'images/L1-p3.png', link: 'product-single.html' },
+			{ id: 4, title: 'Bridal Heritage Haram Set', category: 'jewellery', tag: 'gold haram bridal', badge: 'Bridal Set', img: 'images/L1-p4.png', link: 'product-single.html' },
+			{ id: 5, title: 'Royal Banarasi Silk Saree', category: 'saree', tag: 'silk saree', badge: 'Royal Silk', img: 'images/L-product1.png', link: 'shop.html' },
+			{ id: 6, title: 'Handcrafted Gold Bangle Set', category: 'jewellery', tag: 'gold bangle', badge: '1-Gram Gold', img: 'images/L-product2.png', link: 'shop.html' },
+			{ id: 7, title: 'Festive Soft Silk Saree', category: 'saree', tag: 'silk saree party', badge: 'Festive Wear', img: 'images/L-product3.png', link: 'shop.html' },
+			{ id: 8, title: 'Temple Jewellery Collection', category: 'jewellery', tag: 'gold temple haram', badge: 'Temple Gold', img: 'images/L-product4.png', link: 'shop.html' }
+		];
+
+		function renderSearchItems(items) {
+			var $grid = $('#globalSearchResultsGrid');
+			$grid.empty();
+			if (!items || items.length === 0) {
+				$grid.html('<div class="text-center py-4 w-100" style="color:#d1b696; font-size:14px; grid-column: 1 / -1;">No matching items found. Try searching for "Silk" or "Gold".</div>');
+				return;
+			}
+			items.forEach(function(p) {
+				var cardHTML = `
+				<div class="search-result-card">
+					<img src="${p.img}" alt="${p.title}">
+					<div class="info">
+						<div>
+							<div class="category-badge">${p.badge}</div>
+							<h4>${p.title}</h4>
+						</div>
+						<a href="${p.link}" class="btn-view mt-2">Explore Item →</a>
+					</div>
+				</div>`;
+				$grid.append(cardHTML);
+			});
+		}
+
+		function filterProducts() {
+			var query = $('#globalSearchInput').val().toLowerCase().trim();
+			var activeTag = $('.search-tag-pill.active').data('tag') || 'all';
+
+			var filtered = products.filter(function(p) {
+				var matchesTag = (activeTag === 'all') || 
+					(activeTag === 'kanchipuram' && (p.tag.includes('kanchipuram') || p.category === 'saree')) ||
+					(activeTag === 'gold' && (p.tag.includes('gold') || p.category === 'jewellery')) ||
+					(activeTag === 'bridal' && p.tag.includes('bridal')) ||
+					(activeTag === 'party' && p.tag.includes('party'));
+
+				var matchesQuery = !query || 
+					p.title.toLowerCase().includes(query) || 
+					p.category.toLowerCase().includes(query) || 
+					p.tag.toLowerCase().includes(query) ||
+					p.badge.toLowerCase().includes(query);
+
+				return matchesTag && matchesQuery;
+			});
+
+			renderSearchItems(filtered);
+		}
+
+		$(document).on('click', '#navSearchTrigger, #inlineSearchTrigger, #inlineSearchInput, .header-search-bar, .header-search-btn, .search-trigger-btn', function(e) {
+			e.preventDefault();
+			$('#lakvenaSearchModal').addClass('active');
+			renderSearchItems(products);
+			setTimeout(function() { $('#globalSearchInput').focus(); }, 200);
+		});
+
+
+		$(document).on('click', '#closeSearchModalBtn', function() {
+			$('#lakvenaSearchModal').removeClass('active');
+		});
+
+		$(document).on('keydown', function(e) {
+			if (e.key === 'Escape') {
+				$('#lakvenaSearchModal').removeClass('active');
+			}
+		});
+
+		$(document).on('input', '#globalSearchInput', function() {
+			filterProducts();
+		});
+
+		$(document).on('click', '.search-tag-pill', function() {
+			$('.search-tag-pill').removeClass('active');
+			$(this).addClass('active');
+			filterProducts();
+		});
+	};
+
+	initGlobalSearchModal();
+
+	// Mobile Tap Product Card Action Bar Toggle Handler
+	$(document).on('click', '.product', function(e) {
+		if ($(window).width() <= 991) {
+			if ($(e.target).closest('.btn-card-action').length > 0) {
+				return;
+			}
+			e.preventDefault();
+			var $thisCard = $(this);
+			var isAlreadyActive = $thisCard.hasClass('active-card');
+			
+			$('.product').removeClass('active-card');
+			if (!isAlreadyActive) {
+				$thisCard.addClass('active-card');
+			}
+		}
+	});
+
+	$(document).on('click', function(e) {
+		if ($(e.target).closest('.product').length === 0) {
+			$('.product').removeClass('active-card');
+		}
+	});
+
 })(jQuery);
+
+
+
 

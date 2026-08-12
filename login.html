@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lakvena Collections - Curated Fashion Collections | Elegance Woven with Tradition</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Lakvena Collections - Curated Fashion Collections. Elegance Woven with Tradition. Discover timeless sarees and carefully curated fashion collections.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      :root {
+        --royal-maroon: #0B6623;
+        --deep-maroon: #5A0000;
+        --lux-gold: #D4AF37;
+        --bright-gold: #FFD700;
+        --dark-gold: #B8860B;
+        --soft-gold-bg: rgba(212, 175, 55, 0.08);
+      }
+
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #0d0606;
+      }
+
+      /* Navbar Text Color Fix for Dark Luxury Theme */
+      .ftco_navbar, .ftco-navbar-light, .ftco-navbar-light.scrolled {
+        z-index: 9999 !important;
+        background: rgba(13, 6, 6, 0.95) !important;
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      }
+
+      .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+        color: #ffffff !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        letter-spacing: 1px !important;
+        transition: all 0.3s ease !important;
+        opacity: 0.9 !important;
+      }
+
+      .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
+        color: #FFD700 !important;
+        opacity: 1 !important;
+        transform: translateY(-1px);
+      }
+
+      .ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link {
+        color: #FFD700 !important;
+        font-weight: 700 !important;
+        opacity: 1 !important;
+      }
+
+      .ftco-navbar-light .navbar-brand h5 {
+        color: #FFD700 !important;
+        font-size: 22px;
+        letter-spacing: 1px;
+      }
+
+
+      /* Premium Luxury Animated Ambient Background */
+      .auth-section-premium {
+        position: relative;
+        min-height: calc(100vh - 120px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 70px 15px 70px 15px;
+        background: radial-gradient(circle at 50% 20%, #2a0303 0%, #150202 50%, #0a0101 100%);
+        overflow: hidden;
+      }
+
+      /* Ambient Glowing Orbs */
+      .auth-section-premium::before {
+        content: '';
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(11, 102, 35, 0.35) 0%, rgba(212, 175, 55, 0.12) 50%, transparent 70%);
+        top: -100px;
+        left: -100px;
+        border-radius: 50%;
+        filter: blur(60px);
+        animation: floatGlow 12s infinite alternate ease-in-out;
+        pointer-events: none;
+      }
+
+      .auth-section-premium::after {
+        content: '';
+        position: absolute;
+        width: 450px;
+        height: 450px;
+        background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, rgba(11, 102, 35, 0.2) 50%, transparent 70%);
+        bottom: -100px;
+        right: -100px;
+        border-radius: 50%;
+        filter: blur(60px);
+        animation: floatGlow 10s infinite alternate-reverse ease-in-out;
+        pointer-events: none;
+      }
+
+      @keyframes floatGlow {
+        0% { transform: translate(0, 0) scale(1); }
+        100% { transform: translate(40px, 50px) scale(1.15); }
+      }
+
+      /* Floating Gold Sparkle Accents */
+      .gold-sparkle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: #FFD700;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
+        opacity: 0.6;
+        animation: sparkleFloat 6s infinite ease-in-out;
+        pointer-events: none;
+      }
+      .gold-sparkle.sp1 { top: 15%; left: 20%; animation-delay: 0s; }
+      .gold-sparkle.sp2 { top: 75%; left: 15%; animation-delay: 2s; }
+      .gold-sparkle.sp3 { top: 25%; right: 18%; animation-delay: 4s; }
+      .gold-sparkle.sp4 { top: 80%; right: 22%; animation-delay: 1s; }
+
+      @keyframes sparkleFloat {
+        0%, 100% { opacity: 0.2; transform: translateY(0) scale(0.8); }
+        50% { opacity: 0.9; transform: translateY(-15px) scale(1.3); }
+      }
+
+      /* Ultra Premium Glassmorphism Card Container */
+      .auth-card-lux {
+        position: relative;
+        z-index: 1;
+
+        width: 100%;
+        max-width: 480px;
+        background: rgba(26, 12, 12, 0.75);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 24px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.15);
+        overflow: hidden;
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+        animation: cardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .auth-card-lux:hover {
+        border-color: rgba(212, 175, 55, 0.5);
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.7), 0 0 40px rgba(212, 175, 55, 0.25);
+      }
+
+      @keyframes cardFadeIn {
+        from { opacity: 0; transform: translateY(30px) scale(0.96); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+
+      /* Header inside Card */
+      .auth-card-header-lux {
+        padding: 35px 30px 25px 30px;
+        text-align: center;
+        background: linear-gradient(180deg, rgba(11, 102, 35, 0.4) 0%, rgba(20, 5, 5, 0.2) 100%);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        position: relative;
+      }
+
+      .brand-badge-ring {
+        width: 84px;
+        height: 84px;
+        margin: 0 auto 16px auto;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #0B6623, #B8860B);
+        padding: 3px;
+        box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        position: relative;
+        transition: transform 0.4s ease;
+      }
+      .brand-badge-ring:hover {
+        transform: rotate(5deg) scale(1.05);
+      }
+
+      .brand-badge-ring img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        background: #000;
+      }
+
+      .auth-brand-title {
+        font-family: 'Cinzel', serif;
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: 2px;
+        background: linear-gradient(135deg, #FFF6D6 0%, #FFD700 50%, #D4AF37 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+      }
+
+      .auth-brand-subtitle {
+        font-size: 13px;
+        color: #d1b696;
+        letter-spacing: 0.5px;
+        margin: 0;
+      }
+
+      /* Animated Dual Tabs */
+      .auth-tabs-wrapper {
+        display: flex;
+        background: rgba(10, 3, 3, 0.6);
+        padding: 6px;
+        margin: 20px 30px 0 30px;
+        border-radius: 40px;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        position: relative;
+      }
+
+      .auth-tab-btn {
+        flex: 1;
+        padding: 11px 16px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        color: #a89480;
+        border-radius: 35px;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 2;
+        user-select: none;
+      }
+
+      .auth-tab-btn.active {
+        color: #ffffff;
+        background: linear-gradient(135deg, #0B6623 0%, #B8860B 100%);
+        box-shadow: 0 4px 15px rgba(11, 102, 35, 0.5), 0 0 10px rgba(212, 175, 55, 0.3);
+      }
+
+      .auth-tab-btn:hover:not(.active) {
+        color: #FFD700;
+      }
+
+      /* Body & Inputs */
+      .auth-card-body-lux {
+        padding: 28px 30px 35px 30px;
+      }
+
+      .form-group-lux {
+        margin-bottom: 20px;
+      }
+
+      .form-group-lux label {
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        color: #e6d3c0;
+        margin-bottom: 8px;
+        letter-spacing: 0.3px;
+      }
+
+      .input-wrapper-lux {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .input-wrapper-lux .icon-left {
+        position: absolute;
+        left: 16px;
+        color: #FFD700;
+        font-size: 16px;
+        z-index: 5;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .input-control-lux {
+        width: 100%;
+        height: 50px;
+        background: rgba(15, 6, 6, 0.7);
+        border: 1px solid rgba(212, 175, 55, 0.25);
+        border-radius: 12px;
+        padding: 0 45px 0 46px;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .input-control-lux::placeholder {
+        color: #7a6555;
+      }
+
+      .input-control-lux:focus {
+        outline: none;
+        background: rgba(22, 8, 8, 0.9);
+        border-color: #FFD700;
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.25);
+      }
+
+      .input-control-lux:focus + .icon-left,
+      .input-wrapper-lux:focus-within .icon-left {
+        color: #FFD700;
+        transform: scale(1.15);
+      }
+
+      .password-eye-btn {
+        position: absolute;
+        right: 16px;
+        color: #947e6a;
+        cursor: pointer;
+        font-size: 16px;
+        z-index: 5;
+        transition: color 0.2s ease;
+      }
+
+      .password-eye-btn:hover {
+        color: #FFD700;
+      }
+
+      /* Shimmer Button Effect */
+      .btn-shimmer-lux {
+        position: relative;
+        width: 100%;
+        height: 52px;
+        background: linear-gradient(135deg, #0B6623 0%, #B8860B 50%, #0B6623 100%);
+        background-size: 200% auto;
+        color: #ffffff !important;
+        font-weight: 800;
+        font-size: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border: 1px solid rgba(255, 215, 0, 0.4);
+        border-radius: 26px;
+        box-shadow: 0 6px 20px rgba(11, 102, 35, 0.5), 0 0 15px rgba(212, 175, 55, 0.3);
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .btn-shimmer-lux::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -60%;
+        width: 40%;
+        height: 200%;
+        background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent);
+        transform: rotate(30deg);
+        transition: all 0.6s ease;
+      }
+
+      .btn-shimmer-lux:hover {
+        background-position: right center;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(11, 102, 35, 0.7), 0 0 25px rgba(255, 215, 0, 0.5);
+        border-color: #FFD700;
+      }
+
+      .btn-shimmer-lux:hover::after {
+        left: 130%;
+      }
+
+      /* Social Buttons */
+      .divider-lux {
+        display: flex;
+        align-items: center;
+        margin: 24px 0;
+        color: #8c7866;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      .divider-lux::before, .divider-lux::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+      }
+
+      .divider-lux::before { margin-right: 14px; }
+      .divider-lux::after { margin-left: 14px; }
+
+      .btn-social-lux {
+        width: 100%;
+        height: 48px;
+        background: rgba(20, 8, 8, 0.6);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 24px;
+        color: #e6d3c0;
+        font-weight: 600;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-bottom: 12px;
+      }
+
+      .btn-social-lux:hover {
+        background: rgba(11, 102, 35, 0.25);
+        border-color: #FFD700;
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
+      }
+
+      /* Toast Notification */
+      .toast-lux {
+        display: none;
+        padding: 14px 18px;
+        border-radius: 12px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        animation: slideDown 0.3s ease;
+      }
+
+      @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .toast-lux-success {
+        background: rgba(21, 87, 36, 0.4);
+        border: 1px solid rgba(40, 167, 69, 0.5);
+        color: #85e39d;
+      }
+
+      .toast-lux-danger {
+        background: rgba(114, 28, 36, 0.4);
+        border: 1px solid rgba(220, 53, 69, 0.5);
+        color: #f5989d;
+      }
+
+      /* Logged In Card Dashboard */
+      .dashboard-avatar-ring {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 16px auto;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #0B6623, #FFD700);
+        padding: 3px;
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+      }
+
+      .dashboard-avatar-inner {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: #150505;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFD700;
+        font-size: 34px;
+        font-weight: 800;
+        font-family: 'Cinzel', serif;
+      }
+
+      /* Form transition effect */
+      .form-fade-in {
+        animation: formFade 0.4s ease forwards;
+      }
+
+      @keyframes formFade {
+        from { opacity: 0; transform: translateX(15px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+    </style>
+  </head>
+  <body class="goto-here">
+    
+    <!-- TOP CONTACT BAR -->
+    <div class="py-1 bg-black">
+      <div class="container">
+        <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+          <div class="col-lg-12 d-block">
+            <div class="row d-flex">
+              <div class="col-md pr-4 d-flex topper align-items-center">
+                <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+                <span class="text">+91 799 569 1819</span>
+              </div>
+              <div class="col-md pr-4 d-flex topper align-items-center">
+                <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+                <span class="text">lakvenacollections@gmail.com</span>
+              </div>
+              <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+                <span class="text">3-5 Business days delivery &amp; Free Returns</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="images/Lakvena_logo_1-removebg-preview.png" alt="Lakvena Collections" style="height:60px; width:auto; margin-right:12px;">
+          <div>
+            <h5 class="mb-0" style="font-weight:800; color:#FFD700;">Lakvena</h5>
+
+          </div>
+        </a>
+
+        <!-- Central Amazon-Style Search Bar -->
+        <div class="nav-center-search mx-lg-3">
+            <div class="header-search-bar" id="inlineSearchTrigger">
+                <span class="icon-search search-icon"></span>
+                <input type="text" class="header-search-input" id="inlineSearchInput" placeholder="Search sarees, gold jewellery, collections..." readonly>
+                <button class="header-search-btn" aria-label="Search"><span class="icon-search"></span></button>
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+            <li class="nav-item active"><a href="login.html" class="nav-link" title="Login / Register"><span class="icon-user mr-1"></span><span class="nav-login-text">Login</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ULTRA-PREMIUM LUXURY LOGIN SECTION -->
+    <section class="auth-section-premium">
+      <!-- Background Ambient Sparkles -->
+      <div class="gold-sparkle sp1"></div>
+      <div class="gold-sparkle sp2"></div>
+      <div class="gold-sparkle sp3"></div>
+      <div class="gold-sparkle sp4"></div>
+
+      <div class="auth-card-lux" id="authCardLux">
+        
+        <!-- BRAND BADGE HEADER -->
+        <div class="auth-card-header-lux">
+          <div class="brand-badge-ring">
+            <img src="images/favicon-512x512.png" alt="Lakvena Emblem">
+          </div>
+          <h2 class="auth-brand-title">Lakvena Collections</h2>
+          <p class="auth-brand-subtitle">Pure Silk Sarees &amp; Handcrafted Gold Jewellery</p>
+        </div>
+
+        <!-- DUAL TABS -->
+        <div class="auth-tabs-wrapper" id="authNavTabs">
+          <div class="auth-tab-btn active" id="tabBtnLogin" onclick="switchAuthTab('login')">
+            <span class="icon-user mr-1"></span> Log In
+          </div>
+          <div class="auth-tab-btn" id="tabBtnSignup" onclick="switchAuthTab('signup')">
+            <span class="icon-plus mr-1"></span> Create Account
+          </div>
+        </div>
+
+        <!-- CARD BODY -->
+        <div class="auth-card-body-lux">
+          
+          <div id="toastAlert" class="toast-lux"></div>
+
+          <!-- LOGIN FORM -->
+          <form id="loginForm" class="form-fade-in" onsubmit="handleLoginSubmit(event)">
+            <div class="form-group-lux">
+              <label for="loginEmail">Email Address or Mobile Number</label>
+              <div class="input-wrapper-lux">
+                <span class="icon-left icon-envelope-o"></span>
+                <input type="text" id="loginEmail" class="input-control-lux" placeholder="name@domain.com or +91 9876543210" required>
+              </div>
+            </div>
+
+            <div class="form-group-lux mb-2">
+              <label for="loginPassword">Password</label>
+              <div class="input-wrapper-lux">
+                <span class="icon-left icon-lock"></span>
+                <input type="password" id="loginPassword" class="input-control-lux" placeholder="••••••••••••" required>
+                <span class="password-eye-btn icon-eye" onclick="togglePasswordVisibility('loginPassword', this)"></span>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-4 mt-3">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="rememberMe" checked>
+                <label class="custom-control-label text-muted" for="rememberMe" style="font-size:12px; cursor:pointer;">Remember Me</label>
+              </div>
+              <a href="javascript:void(0)" onclick="showToast('Password reset link sent to your phone/email.', true)" style="color:#FFD700; font-size:12px; font-weight:600;">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn-shimmer-lux">
+              Log In to Account <span class="icon-arrow-right"></span>
+            </button>
+
+            <div class="divider-lux">OR SIGN IN WITH</div>
+
+            <button type="button" class="btn-social-lux" onclick="simulateGoogleLogin()">
+              <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" style="width:18px;"> Continue with Google
+            </button>
+            <button type="button" class="btn-social-lux" onclick="simulateWhatsAppLogin()">
+              <span class="icon-phone" style="color:#25D366; font-size:16px;"></span> WhatsApp Quick OTP
+            </button>
+          </form>
+
+          <!-- SIGNUP FORM -->
+          <form id="signupForm" style="display:none;" onsubmit="handleSignupSubmit(event)">
+            <div class="form-group-lux">
+              <label for="signupName">Full Name</label>
+              <div class="input-wrapper-lux">
+                <span class="icon-left icon-user"></span>
+                <input type="text" id="signupName" class="input-control-lux" placeholder="Your full name" required>
+              </div>
+            </div>
+
+            <div class="form-group-lux">
+              <label for="signupEmail">Email Address</label>
+              <div class="input-wrapper-lux">
+                <span class="icon-left icon-envelope-o"></span>
+                <input type="email" id="signupEmail" class="input-control-lux" placeholder="name@domain.com" required>
+              </div>
+            </div>
+
+            <div class="form-group-lux">
+              <label for="signupPhone">Phone Number (+91)</label>
+              <div class="input-wrapper-lux">
+                <span class="icon-left icon-phone"></span>
+                <input type="tel" id="signupPhone" class="input-control-lux" placeholder="+91 9876543210" required>
+              </div>
+            </div>
+
+            <div class="form-group-lux mb-3">
+              <label for="signupPassword">Create Password</label>
+              <div class="input-wrapper-lux">
+                <span class="icon-left icon-lock"></span>
+                <input type="password" id="signupPassword" class="input-control-lux" placeholder="Minimum 6 characters" minlength="6" required>
+                <span class="password-eye-btn icon-eye" onclick="togglePasswordVisibility('signupPassword', this)"></span>
+              </div>
+            </div>
+
+            <div class="custom-control custom-checkbox mb-4">
+              <input type="checkbox" class="custom-control-input" id="agreeTerms" required>
+              <label class="custom-control-label text-muted" for="agreeTerms" style="font-size:12px;">I accept the <a href="#" style="color:#FFD700;">Terms</a> &amp; <a href="#" style="color:#FFD700;">Privacy Policy</a></label>
+            </div>
+
+            <button type="submit" class="btn-shimmer-lux">
+              Create Account <span class="icon-check"></span>
+            </button>
+          </form>
+
+          <!-- LOGGED IN USER DASHBOARD -->
+          <div id="loggedInDashboard" style="display:none; text-align:center;" class="form-fade-in">
+            <div class="dashboard-avatar-ring">
+              <div class="dashboard-avatar-inner" id="dashAvatar">U</div>
+            </div>
+            <h3 id="dashUserName" style="font-family:'Cinzel', serif; font-weight:700; color:#FFD700; margin-bottom:4px;">User Name</h3>
+            <p id="dashUserEmail" style="color:#c5b29f; font-size:13px;" class="mb-4">user@example.com</p>
+
+            <div class="p-3 mb-4 text-left" style="background:rgba(10,4,4,0.7); border:1px solid rgba(212,175,55,0.25); border-radius:14px;">
+              <div class="d-flex justify-content-between mb-2" style="font-size:13px; color:#e0d0bf;">
+                <span>Membership Level:</span>
+                <span class="badge" style="background:linear-gradient(135deg, #0B6623, #B8860B); color:#fff; padding:4px 10px; border-radius:12px;">VIP Patron</span>
+              </div>
+              <div class="d-flex justify-content-between mb-2" style="font-size:13px; color:#e0d0bf;">
+                <span>Lakvena Rewards:</span>
+                <span style="color:#FFD700; font-weight:700;">500 Points</span>
+              </div>
+              <div class="d-flex justify-content-between" style="font-size:13px; color:#e0d0bf;">
+                <span>Shopping Cart:</span>
+                <a href="cart.html" style="color:#FFD700; font-weight:700;">View Items →</a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-6">
+                <a href="shop.html" class="btn btn-outline-warning btn-block rounded-pill font-weight-bold" style="border-color:#FFD700; color:#FFD700; font-size:13px; padding:10px;">Explore Sarees</a>
+              </div>
+              <div class="col-6">
+                <button type="button" onclick="handleLogout()" class="btn btn-danger btn-block rounded-pill font-weight-bold" style="background:#0B6623; border:none; font-size:13px; padding:10px;">Log Out</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="ftco-footer ftco-section" style="background:#070202;">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Lakvena Collections</h2>
+              <p>Your destination for handcrafted Kanchipuram silk sarees &amp; authentic 1-gram gold jewellery.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-4">
+                <li class="ftco-animate"><a href="https://www.instagram.com/lakvenacollections/" target="_blank"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/lakvenacollections/" target="_blank"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.youtube.com/@Lakvena" target="_blank"><span class="icon-youtube-play"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="shop.html" class="py-2 d-block">Shop Collection</a></li>
+                <li><a href="about.html" class="py-2 d-block">About Us</a></li>
+                <li><a href="blog.html" class="py-2 d-block">Blog</a></li>
+                <li><a href="contact.html" class="py-2 d-block">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Have Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">Visakhapatnam &amp; Hyderabad, India</span></li>
+                  <li><a href="tel:+917995691819"><span class="icon icon-phone"></span><span class="text">+91 799 569 1819</span></a></li>
+                  <li><a href="mailto:lakvenacollections@gmail.com"><span class="icon icon-envelope"></span><span class="text">lakvenacollections@gmail.com</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> <strong>Lakvena Collections</strong>. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LOADER -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#0B6623"/></svg></div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      // Immediately hide loader if visible
+      (function() {
+        var loader = document.getElementById('ftco-loader');
+        if (loader) {
+          loader.classList.remove('show');
+          setTimeout(function() { loader.style.display = 'none'; }, 200);
+        }
+      })();
+    </script>
+
+
+    <script>
+      function switchAuthTab(tab) {
+        var loginForm = document.getElementById('loginForm');
+        var signupForm = document.getElementById('signupForm');
+        var tabBtnLogin = document.getElementById('tabBtnLogin');
+        var tabBtnSignup = document.getElementById('tabBtnSignup');
+        var toastAlert = document.getElementById('toastAlert');
+
+        toastAlert.style.display = 'none';
+
+        if (tab === 'login') {
+          loginForm.style.display = 'block';
+          loginForm.classList.add('form-fade-in');
+          signupForm.style.display = 'none';
+          tabBtnLogin.classList.add('active');
+          tabBtnSignup.classList.remove('active');
+        } else {
+          loginForm.style.display = 'none';
+          signupForm.style.display = 'block';
+          signupForm.classList.add('form-fade-in');
+          tabBtnSignup.classList.add('active');
+          tabBtnLogin.classList.remove('active');
+        }
+      }
+
+      function togglePasswordVisibility(inputId, iconElem) {
+        var input = document.getElementById(inputId);
+        if (input.type === 'password') {
+          input.type = 'text';
+          iconElem.classList.remove('icon-eye');
+          iconElem.classList.add('icon-eye-slash');
+        } else {
+          input.type = 'password';
+          iconElem.classList.remove('icon-eye-slash');
+          iconElem.classList.add('icon-eye');
+        }
+      }
+
+      function showToast(msg, isSuccess) {
+        var toast = document.getElementById('toastAlert');
+        toast.className = 'toast-lux ' + (isSuccess ? 'toast-lux-success' : 'toast-lux-danger');
+        toast.innerHTML = (isSuccess ? '✓ ' : '⚠ ') + msg;
+        toast.style.display = 'block';
+      }
+
+      function handleLoginSubmit(e) {
+        e.preventDefault();
+        var email = document.getElementById('loginEmail').value.trim();
+        var pass = document.getElementById('loginPassword').value;
+
+        if (!email || !pass) {
+          showToast('Please fill in your login credentials.', false);
+          return;
+        }
+
+        var userName = email.split('@')[0];
+        userName = userName.charAt(0).toUpperCase() + userName.slice(1);
+
+        var userData = { name: userName, email: email, loggedIn: true };
+        localStorage.setItem('lakvena_user', JSON.stringify(userData));
+
+        showToast('Welcome back, ' + userName + '! Redirecting...', true);
+        setTimeout(function() {
+          checkUserStatus();
+          if (typeof updateNavUserText === 'function') updateNavUserText();
+        }, 1000);
+      }
+
+      function handleSignupSubmit(e) {
+        e.preventDefault();
+        var name = document.getElementById('signupName').value.trim();
+        var email = document.getElementById('signupEmail').value.trim();
+        var phone = document.getElementById('signupPhone').value.trim();
+        var pass = document.getElementById('signupPassword').value;
+
+        if (!name || !email || !pass) {
+          showToast('Please complete all required fields.', false);
+          return;
+        }
+
+        var userData = { name: name, email: email, phone: phone, loggedIn: true };
+        localStorage.setItem('lakvena_user', JSON.stringify(userData));
+
+        showToast('Account created! Welcome to Lakvena Collections.', true);
+        setTimeout(function() {
+          checkUserStatus();
+          if (typeof updateNavUserText === 'function') updateNavUserText();
+        }, 1200);
+      }
+
+      function simulateGoogleLogin() {
+        var userData = { name: 'Priya Sharma', email: 'priya.sharma@gmail.com', loggedIn: true };
+        localStorage.setItem('lakvena_user', JSON.stringify(userData));
+        showToast('Signed in with Google! Welcome Priya.', true);
+        setTimeout(function() {
+          checkUserStatus();
+          if (typeof updateNavUserText === 'function') updateNavUserText();
+        }, 1000);
+      }
+
+      function simulateWhatsAppLogin() {
+        var phone = prompt('Enter your 10-digit WhatsApp Mobile Number:');
+        if (phone && phone.length >= 10) {
+          var userData = { name: 'Member (' + phone.slice(-4) + ')', email: phone + '@whatsapp.user', loggedIn: true };
+          localStorage.setItem('lakvena_user', JSON.stringify(userData));
+          showToast('WhatsApp OTP Verified! Welcome back.', true);
+          setTimeout(function() {
+            checkUserStatus();
+            if (typeof updateNavUserText === 'function') updateNavUserText();
+          }, 1000);
+        }
+      }
+
+      function handleLogout() {
+        localStorage.removeItem('lakvena_user');
+        checkUserStatus();
+        if (typeof updateNavUserText === 'function') updateNavUserText();
+        showToast('Logged out successfully.', true);
+      }
+
+      function checkUserStatus() {
+        var raw = localStorage.getItem('lakvena_user');
+        var loginForm = document.getElementById('loginForm');
+        var signupForm = document.getElementById('signupForm');
+        var navTabs = document.getElementById('authNavTabs');
+        var dash = document.getElementById('loggedInDashboard');
+
+        if (raw) {
+          try {
+            var user = JSON.parse(raw);
+            if (user && user.loggedIn) {
+              loginForm.style.display = 'none';
+              signupForm.style.display = 'none';
+              navTabs.style.display = 'none';
+              dash.style.display = 'block';
+
+              document.getElementById('dashUserName').innerText = user.name || 'Valued Member';
+              document.getElementById('dashUserEmail').innerText = user.email || 'Member Account';
+              document.getElementById('dashAvatar').innerText = (user.name ? user.name.charAt(0).toUpperCase() : 'U');
+              return;
+            }
+          } catch(e) {}
+        }
+
+        navTabs.style.display = 'flex';
+        dash.style.display = 'none';
+        switchAuthTab('login');
+      }
+
+      function hideLoader() {
+        var loader = document.getElementById('ftco-loader');
+        if (loader) {
+          loader.classList.remove('show');
+          loader.style.display = 'none';
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        checkUserStatus();
+        hideLoader();
+      });
+
+      window.addEventListener('load', function() {
+        hideLoader();
+      });
+
+    </script>
+  </body>
+</html>
